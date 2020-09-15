@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scosh NIT Surat</title>
+    <meta name="description" content="Scosh website">
+    <link rel="stylesheet" href="css/style-prev.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/starrysky.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fonts/CircularStdBold/font.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        a.dropdown-item {
+            color: white;
+        }
+
+        @font-face {
+            font-family: 'CeraPro-black';
+            src: url("fonts/CeraPro-Black.ttf") format("truetype");
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'CeraPro-bold';
+            src: url("fonts/CeraPro-Bold.ttf") format("truetype");
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'CeraPro-regular';
+            src: url("fonts/CeraPro-Regular.ttf") format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'CeraPro-Thin';
+            src: url("fonts/CeraPro-Thin.ttf") format("truetype");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'CeraPro-medium';
+            src: url("fonts/CeraPro-Medium.ttf") format("truetype");
+            font-weight: 500;
+            font-style: normal;
+        }
+
+
+        #content div h1,
+        #com-content div h1,
+        .faq-head h1,
+        h1.what {
+            font-family: 'CeraPro-bold';
+        }
+
+        #content div p,
+        #com-content div p {
+            font-family: 'CeraPro-regular';
+        }
+
+        .link p,
+        .link a,
+        .collapsible,
+        .later p,
+        .content,
+        #lady p,
+        a.nav-link {
+            font-family: 'CeraPro-medium';
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <button onclick="topFunction()" id="GoToTop" title="Go to top">Top</button> -->
+
+    <svg onclick="topFunction()" id="GoToTop" data-markup-inline="" alt="" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="349.629px" height="349.629px"
+        viewBox="0 0 349.629 349.629" xml:space="preserve">
+
+        <polygon points="174.827,73.433 0,253.42 23.434,276.19 174.827,120.318 326.216,276.196 349.629,253.42   ">
+        </polygon>
+    </svg>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top main-nav c25" id="mainNav">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand js-scroll-trigger navbar-title" href="#"><img src="images/Text-Logo.png" class="navbar-img"></a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                style="margin-left: 90%; border: none;">
+                <img style="width:50px; padding: 0px 0px; margin: 0px 0px; " src="images/nav.png">
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto navbar-list">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#magazine">Magazine</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/events">Events & Workshop</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Teams
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="down"
+                            style="background-color: transparent !important;">
+                            <a class="dropdown-item" href="/team/2020-21">2020-21</a>
+                            <a class=" dropdown-item" href="/team/209-20">2019-20</a>
+                            <a class="dropdown-item" href="/team/2018-19">2018-19</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="home-page" style="overflow: hidden;">
+        <div class="heading">
+            <div class="container">
+                <div class="stars" style="z-index: 0;">
+                    <% for(var i = 0; i <= 100; ++i) { %>
+                    <div class="star"></div>
+                    <% } %>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="main-landing-text" style="z-index: 10;">
+            <div class="hint" style="z-index: 4;">
+                <!-- <img src="images/Landing/text_logo_2.svg" alt="" id="logo"> -->
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 988.6 156"
+                    style="enable-background:new 0 0 988.6 156;" xml:space="preserve">
+
+                    <style type="text/css">
+                        .st0 {
+                            font-family: 'CircularStdBold';
+                        }
+
+                        .st1 {
+                            font-size: 132px;
+                        }
+
+                        .st2 {
+                            clip-path: url(index.html);
+                        }
+
+                        .st3 {
+                            fill: #F79737;
+                        }
+
+                        .st4 {
+                            display: none;
+                            fill: #E9F401;
+                        }
+
+                        .st5 {
+                            display: none;
+                            fill: #E7F405;
+                        }
+
+                        .st6 {
+                            fill: #FF6A48;
+                        }
+
+                        .st7 {
+                            fill: #EF489C;
+                        }
+
+                        .st8 {
+                            fill: #C146A4;
+                        }
+
+                        .st9 {
+                            fill: #97469E;
+                        }
+
+                        .st10 {
+                            text-align: center;
+                        }
+                    </style>
+                </svg>
+            </div>
+        </div>
+
+        <img src="./images/sun.png" alt="" id="mid" style="padding-top: 0%;max-width:32%; max-height:35%">
+
+        <img src="./images/logo.png" alt="" class="main-landing-text" id="mid">
+
+        <img src="./images/earth.png" alt="" id="front" style="z-index:10; position: absolute;
+      padding-right: 0%;
+      right: 0px;
+      bottom: 80px;
+      transform: rotate(30fdeg); 
+      max-width:15%; max-height:18%">
+
+
+    </div>
+    <div id="about" style="height: 2.5em;"></div>
+    <div class="about">
+        <!-- <div id="test" style="width:10ew;">
+      <!-- <div class="ball"></div> -->
+        <!--  </div> -->
+
+        <div class="row" id="content">
+            <div class="col-sm-12">
+                <!-- <div class="ball" style="margin-left: 3em;"></div> -->
+                <!-- <div class="ball" style="margin-right: 3em;"></div> -->
+                <h1 class="what">Who are We ? </h1>
+                <p class="what-content">
+                    The Society for Cultivation of Science and Humanities (SCOSH) is a student chapter of SVNIT that
+                    aims to
+                    develop and nurture scientific temperament among students. We conduct various events year-round to
+                    instill the
+                    culture of science entertainingly. Some of our club's highlights are InQuest, one of its kind 10
+                    hours long
+                    research-related event, movie screenings and workshops. With our guiding motto, "small steps make a
+                    big one"
+                    we carry forward our goal of creating a scientific society with a great team. At SCOSH, we integrate
+                    our
+                    passion for science with other skills such as content writing, management, administration and
+                    technical
+                    skills. SCOSH has been a witness to many great journeys that started here with a small step and we
+                    look
+                    forward to being a part of many more.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="magazine" style="height: 8em;"></div>
+
+    <div class="brochure-box flex-container" style=" margin-top: 40%; margin-bottom: 0%;">
+        <div class="ribbon blue-box"><img src="images/ribbon.svg" alt=""></div>
+        <div class="blue-box brch">
+            <div class="link">
+                <p><b><u>Sci - Verse</u></b><br>This magazine
+                    is to a small step
+                    towards popularising
+                    science
+                    and create
+                    an environment
+                    that inculcates its
+                    culture in the college.</p>
+                <a href="./assets/magazine.pdf" download>Download Magazine</a>
+            </div>
+        </div>
+        <div class="blue-box dot">
+        </div>
+    </div>
+
+    <div class="container-fluid sponsors sponsor-section" id="blog"
+        style="padding: 0%; margin-top:-8%; margin-bottom: 30em;">
+
+        <div class="row" style="margin-bottom: 1%;">
+            <div class="col-12 text-center">
+                <h1 class="what">Popular Blogs</h1>
+            </div>
+        </div>
+
+        <section class="cards-wrapper">
+            <% for(var i = 0; i < Math.min(blogs.length,6); ++i) { %>
+            <div class="card-grid-space">
+                <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
+                    style="--bg-img: url('<%= blogs[i].image %>')">
+                    <div>
+                        <h1><%= blogs[i].title %></h1>
+                        <p style="padding-bottom: 10.5em;">
+                            <%= blogs[i].content.substring(1,Math.min(100,blogs[i].content.length)) %> ...</p>
+                        <div class="views">
+                            <p><%=blogs[i].views %> Views</p>
+                        </div>
+                        <div class="date"><%= blogs[i].date %></div>
+                        <div class="auther">
+                            <p> By <%= blogs[i].auther %> </p>
+                        </div>
+
+                        <div class="tags">
+                            <% for(var j = 0; j < Math.min(3,blogs[i].tags.length); ++j) { %>
+                            <div class="tag"><%= blogs[i].tags[j].tag %></div>
+                            <% } %>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <% } %>
+        </section>
+    </div>
+    </div>
+    <br><br>
+    <br><br>
+
+
+    <div class="footer-outer" style="margin-top:-20em;">
+        <div class="footer" id="contact">
+
+            <div class="row footer-row footer-info">
+                <div class="col-12" style="color: white;">
+                    <i class="fa fa-map-marker" style="color: #cbd1db; padding-right: 1em"></i><a
+                        href="https://goo.gl/maps/CXxQ8qv8wL958bqu9">Sardar Vallabhbhai National Institute of
+                        Technology</a></div>
+
+            </div>
+
+            <div class="row footer-row justify-content-around footer-social-links">
+                <div class="col-sm-3 col-12">
+                    <a href="https://www.facebook.com/scosh.svnit" target="_blank" style="color: white">Facebook</a>
+                </div>
+
+                <div class="col-sm-3 col-12">
+                    <a href="https://twitter.com/scosh_svnit" target="_blank" style="color: white">Twitter</a>
+                </div>
+
+                <div class="col-sm-3 col-12">
+                    <a href="mailto:svnit.scosh@gmail.com" target="_blank" style="color: white">Gmail</a>
+                </div>
+
+                <div class="col-sm-3 col-12">
+                    <a href="https://www.instagram.com/" target="_blank" style="color: white">Instagram</a>
+                </div>
+            </div>
+            <div class="col-12" style="color: white; font-size: 1.3em; text-align: center;">
+                Copyright © 2020 Scosh NIT Surat
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+    <script>
+        $(".navbar-toggler").click(function () {
+            $(this).toggleClass("btn-top");
+            // $(".navbar-collapse").toggleClass("show");
+            $(".main-nav").toggleClass("white");
+            $(".nav-link").toggleClass("black");
+        });
+        // $('.nav-link').click(function () {
+        //     // $(".navbar-collapse").toggleClass("show");
+        //     $(".main-nav").toggleClass("white");
+        //     $(".nav-link").toggleClass("black");
+        //     $('.navbar-toggler').toggleClass('btn-top');
+        // });
+    </script>
+    <script>
+
+        window.onscroll = function () { scrollFunction(); scrollToTop(); };
+
+        //Get the button:
+        // When the user scrolls down 20px from the top of the document, show the button
+
+        function scrollToTop() {
+            mybutton = document.getElementById("GoToTop");
+
+            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("mainNav").classList.remove("c25");
+                document.getElementById("mainNav").style.backgroundColor = "#000000 !important";
+                document.getElementById("mainNav").classList.add("shadowFix");
+                document.getElementById("mainNav").classList.add("c23");
+
+            } else {
+                document.getElementById("mainNav").classList.add("c25");
+                document.getElementById("mainNav").classList.remove("shadowFix");
+                document.getElementById("mainNav").classList.remove("c23");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
