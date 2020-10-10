@@ -176,18 +176,20 @@
     <ul class="pagination justify-content-center pagination" style="color:black; padding-bottom: 10em;">
       <% if(page == 1) { %>
       <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1">Previous</a>
+        <a class="page-link" href="#" tabindex="-1" style="background-color: darkgray; color: white;">Previous</a>
       </li>
 
       <% } else { %>
-      <li class="page-item">
-        <a class="page-link" href="/blogs?page=<%= page-1 %>" tabindex="-1">Previous</a>
+      <li class="page-item" ">
+        <a class=" page-link" href="/blogs?page=<%= page-1 %>" tabindex="-1"
+        style="background-color: darkgray; color: white;"">
+        Previous</a>
       </li>
       <% } %>
 
       <% for(var i = Math.max(1,page - 2); i < page; ++i) { %>
       <% if(i <= totalPage) { %>
-      <li class="page-item">
+      <li class=" page-item">
         <a class="page-link" href="/blogs?page=<%= i %>"><%= i%> </a>
       </li>
       <% }} %>
@@ -205,12 +207,13 @@
 
       <% if(page == totalPage) { %>
       <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1">Next</a>
+        <a class="page-link" href="#" tabindex="-1" style="background-color: darkgray; color: white;">Next</a>
       </li>
 
       <% } else { %>
       <li class="page-item">
-        <a class="page-link" href="/blogs?page=<%= page+1 %>" tabindex="-1">Next</a>
+        <a class="page-link" href="/blogs?page=<%= page+1 %>" tabindex="-1"
+          style="background-color: darkgray; color: white;">Next</a>
       </li>
       <% } %>
 
