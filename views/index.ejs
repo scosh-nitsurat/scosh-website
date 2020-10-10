@@ -278,7 +278,7 @@
     <section class="cards-wrapper">
       <% for(var i = 0; i < Math.min(blogs.length,6); ++i) { %>
       <div class="card-grid-space">
-        <a class="card" href="" style="--bg-img: url('<%= blogs[i].image %>')">
+        <a class="card" href="blog/<%= blogs[i].id %>" style="--bg-img: url('<%= blogs[i].image %>')">
           <div>
             <h1><%= blogs[i].title %></h1>
             <p style="padding-bottom: 10.5em;">

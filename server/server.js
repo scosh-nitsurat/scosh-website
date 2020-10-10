@@ -17,6 +17,7 @@ app.set("view engine", "ejs");
 
 const teamMember = require("./models/teamMember");
 const blogs = require("./models/blog");
+const { update } = require("./models/teamMember");
 require("dotenv").config();
 const value = new Map();
 
@@ -84,7 +85,6 @@ app.get("/team/:year", (req, res) => {
                 if (value.get(a.position) > value.get(b.position)) return 1;
                 return -1;
             });
-            console.log(team[0]["Member"]);
             res.render("teams.ejs", {
                 team: team,
             });
@@ -92,6 +92,41 @@ app.get("/team/:year", (req, res) => {
         .catch(function (err) {
             return console.log(err);
         });
+});
+
+//@type GET
+//@route /blog/
+//@desc reading the blog
+//@access PUBLIC
+
+app.get("/blog/:id", (req, res) => {
+    var id = req.params.id;
+    blogs
+        .find()
+        .then((blogCollection) => {
+            var blog = blogCollection.find((b) => b.id == id);
+            blogCollection = blogCollection.filter((item) => item.id !== id);
+            blogCollection.sort((a, b) => {
+                var A = 0,
+                    B = 0;
+                for (var i = 0; i < blog.tags.length; ++i) {
+                    if (a.tags.includes(blog.tags[i])) A++;
+                    if (b.tags.includes(blog.tags[i])) B++;
+                }
+                if (A < B) return 1;
+                return -1;
+            });
+            res.render("reading.ejs", {
+                blogs: blogCollection,
+                blog: blog,
+            });
+            var myquery = { views: blog.views };
+            var newvalues = { $set: { views: blog.views + 1 } };
+            blogs.updateOne(myquery, newvalues, function (err, res) {
+                if (err) throw err;
+            });
+        })
+        .catch((err) => console.log(err));
 });
 
 //@type GET

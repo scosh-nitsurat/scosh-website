@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogs-Scosh</title>
+    <link rel="icon" type="image/webp" href="/images/logo2.webp">
+    <!-- For apple devices -->
+    <link rel="apple-touch-icon" type="image/webp" href="/images/logo2.webp" />
+    <meta name="description" content="Scosh website">
+    <link rel="stylesheet" href="/css/style-prev.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/fonts/CircularStdBold/font.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'CeraPro-black';
+            src: url("/fonts/CeraPro-Black.ttf") format("truetype");
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'CeraPro-bold';
+            src: url("/fonts/CeraPro-Bold.ttf") format("truetype");
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'CeraPro-regular';
+            src: url("/fonts/CeraPro-Regular.ttf") format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'CeraPro-Thin';
+            src: url("/fonts/CeraPro-Thin.ttf") format("truetype");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'CeraPro-medium';
+            src: url("/fonts/CeraPro-Medium.ttf") format("truetype");
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        a.dropdown-item {
+            color: white;
+        }
+
+        #content div h1,
+        #com-content div h1,
+        .faq-head h1,
+        h1.what {
+            font-family: 'CeraPro-bold';
+        }
+
+        #content div p,
+        #com-content div p {
+            font-family: 'CeraPro-regular';
+        }
+
+        .link p,
+        .link a,
+        .collapsible,
+        .later p,
+        .content,
+        #lady p,
+        a.nav-link {
+            font-family: 'CeraPro-medium';
+        }
+    </style>
+
+</head>
+
+<body>
+    <img src="/images/top.webp" onclick="topFunction()" alt="" id="GoToTop">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top c25" id="mainNav"
+        style="background-color: #080808f3 !important; overflow:visible;">
+        <div class="container-fluid" style="padding-right:0; padding-left:0%;">
+            <a class="navbar-brand" href="#" id="titleNav"
+                style="color:#cbd1db; font-family: CeraPro-bold; font-size: 3.3em;">
+                <img src="/images/logo2.webp" style="width: 2em;"> Blogs</a>
+            <!-- <a class="navbar-brand js-scroll-trigger navbar-title" href="#"><img src="images/Text-Logo.png" class="navbar-img"></a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                style="margin-left: 90%; border: none; margin-top: 0em;">
+                <img style="width:50px; padding: 0px 0px; margin: 0px 0px; " src="/images/nav2.webp">
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto navbar-list">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/#magazine">Magazine</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/events">Events & Workshop</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Teams
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"
+                            style="background-color: #080808f3;">
+                            <a class="dropdown-item" href="/team/2020-21">2020-21</a>
+                            <a class=" dropdown-item" href="/team/2019-20">2019-20</a>
+                            <a class="dropdown-item" href="/team/2018-19">2018-19</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div style="padding-top: 20em; padding-bottom: 17em;">
+        <div class="head" style="padding: 3em;">
+            <h1 style="text-align: center; font-family: CeraPro-bold"><%= blog.title %></h1>
+            <h4 style="text-align: center; font-family: CeraPro-regular"> By <%=blog.auther %></h4>
+            <div style="text-align: center; margin: 10em;">
+                <% if(blog.image != 'null') %>
+                <img width="100%" src="<%= blog.image %>">
+            </div>
+        </div>
+        <div
+            style="margin-left:20%; margin-right:20%; margin-top:10%; margin-bottom: 10%;text-align: left; font-size: 2em;">
+            <p style="font-family:'Times New Roman', Times, serif "> <%= blog.content %></p>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 1%;">
+        <div class="col-12 text-center">
+            <h1 class="what">Related Blogs</h1>
+        </div>
+    </div>
+
+    <section class="cards-wrapper">
+        <% for(var i = 0; i < Math.min(blogs.length,3); ++i) { %>
+        <div class="card-grid-space">
+            <a class="card" href="<%= blogs[i].id %>" style="--bg-img: url('<%= blogs[i].image %>')">
+                <div>
+                    <h1><%= blogs[i].title %></h1>
+                    <p style="padding-bottom: 10.5em;">
+                        <%= blogs[i].content.substring(0,Math.min(100,blogs[i].content.length)) %> ...</p>
+                    <div class="views">
+                        <p><%=blogs[i].views %> Views</p>
+                    </div>
+                    <div class="date"><%= blogs[i].date %></div>
+                    <div class="auther">
+                        <p> By <%= blogs[i].auther %> </p>
+                    </div>
+
+                    <div class="tags">
+                        <% for(var j = 0; j < Math.min(3,blogs[i].tags.length); ++j) { %>
+                        <div class="tag"><%= blogs[i].tags[j].tag %></div>
+                        <% } %>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <% } %>
+    </section>
+    </div>
+    </div>
+
+
+    <div class="footer-outer">
+        <div class="footer" id="contact">
+
+            <div class="row footer-row footer-info">
+                <div class="col-12" style="color: white;">
+                    <i class="fa fa-map-marker" style="color: #cbd1db; padding-right: 1em"></i><a
+                        href="https://goo.gl/maps/CXxQ8qv8wL958bqu9">Sardar Vallabhbhai National Institute of
+                        Technology</a></div>
+
+            </div>
+            <div class="row footer-row justify-content-around footer-social-links">
+                <div class="col-sm-3 col-12">
+                    <a href="https://www.facebook.com/scosh.svnit" target="_blank" style="color: white">Facebook</a>
+                </div>
+
+                <div class="col-sm-3 col-12">
+                    <a href="https://twitter.com/scosh_svnit" target="_blank" style="color: white">Twitter</a>
+                </div>
+
+                <div class="col-sm-3 col-12">
+                    <a href="mailto:svnit.scosh@gmail.com" target="_blank" style="color: white">Gmail</a>
+                </div>
+
+                <div class="col-sm-3 col-12">
+                    <a href="https://www.instagram.com/" target="_blank" style="color: white">Instagram</a>
+                </div>
+            </div>
+            <div class="col-12" style="color: white; font-size: 1.3em; text-align: center;">
+                Copyright © 2020 Scosh NIT Surat
+            </div>
+
+        </div>
+
+        <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script>
+            $(".navbar-toggler").click(function () {
+                $(this).toggleClass("btn-top");
+                // $(".navbar-collapse").toggleClass("show");
+                $(".main-nav").toggleClass("white");
+                $(".nav-link").toggleClass("black");
+            });
+            $('.nav-link').click(function () {
+                // $(".navbar-collapse").toggleClass("show");
+                $(".main-nav").toggleClass("white");
+                $(".nav-link").toggleClass("black");
+                $('.navbar-toggler').toggleClass('btn-top');
+            });
+        </script>
+        <script>
+
+            window.onscroll = function () { scrollFunction(); scrollToTop(); };
+
+            //Get the button:
+            // When the user scrolls down 20px from the top of the document, show the button
+
+            function scrollToTop() {
+                mybutton = document.getElementById("GoToTop");
+
+                if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+
+
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("mainNav").classList.remove("c25");
+                    document.getElementById("mainNav").style.backgroundColor = "#000000 !important";
+                    document.getElementById("mainNav").classList.add("shadowFix");
+                    document.getElementById("mainNav").classList.add("c23");
+
+                } else {
+                    document.getElementById("mainNav").classList.add("c25");
+                    document.getElementById("mainNav").classList.remove("shadowFix");
+                    document.getElementById("mainNav").classList.remove("c23");
+                }
+            }
+
+        </script>
+</body>
+
+</html>
