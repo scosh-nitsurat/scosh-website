@@ -105,6 +105,7 @@ app.get("/blog/:id", (req, res) => {
         .find()
         .then((blogCollection) => {
             var blog = blogCollection.find((b) => b.id == id);
+            console.log(blog);
             blogCollection = blogCollection.filter((item) => item.id !== id);
             blogCollection.sort((a, b) => {
                 var A = 0,

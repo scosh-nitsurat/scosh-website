@@ -2,14 +2,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 var blogSchema = new Schema({
-
     auther: {
         type: String,
         require: true,
     },
-    views : {
+    views: {
         type: Number,
-        default: 0
+        default: 0,
     },
     image: {
         type: String,
@@ -20,20 +19,22 @@ var blogSchema = new Schema({
         require: true,
     },
 
-    content: {
-        type: String,
-        require: true,
-    },
+    content: [
+        {
+            type: String,
+        },
+    ],
     date: {
         type: String,
         require: true,
     },
-    tags:[{
-        tag: {
-            type: String,
-        }
-    }]
-     
+    tags: [
+        {
+            tag: {
+                type: String,
+            },
+        },
+    ],
 });
 
-module.exports = blogSchema = mongoose.model("blog",blogSchema);
+module.exports = blogSchema = mongoose.model("blog", blogSchema);

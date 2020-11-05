@@ -282,7 +282,7 @@
           <div>
             <h1><%= blogs[i].title %></h1>
             <p style="padding-bottom: 10.5em;">
-              <%= blogs[i].content.substring(0,Math.min(100,blogs[i].content.length)) %> ...</p>
+              <%= blogs[i].content[0].substring(0,Math.min(100,blogs[i].content[0].length)) %> ...</p>
             <div class="views">
               <p><%=blogs[i].views %> Views</p>
             </div>

@@ -144,22 +144,27 @@
         <div class="head" style="padding: 3em;">
             <h1 style="text-align: center; font-family: CeraPro-bold"><%= blog.title %></h1>
             <h4 style="text-align: center; font-family: CeraPro-regular"> By <%=blog.auther %></h4>
-            <div style="text-align: center; margin: 10em;">
+            <div style="text-align: center; margin-top: 10em;">
                 <% if(blog.image != 'null') %>
-                <img width="100%" src="<%= blog.image %>">
+                <img width="65%" src="<%= blog.image %>">
             </div>
         </div>
         <div
-            style="margin-left:10%; margin-right:10%; margin-top:10%; margin-bottom: 10%;text-align: left; font-size: 2em;">
-            <p style="font-family:'Times New Roman', Times, serif "> <%= blog.content %> </p>
+            style="margin-left:10%; margin-right:10%; margin-top:7%; margin-bottom: 10%;text-align: left; font-size: 2em;">
+            <% for(var i = 0; i < blog.content.length; ++i) { %>
+            <p style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: white; widht: 100%">
+                <%= blog.content[i] %>
+            </p>
+            <% } %>
         </div>
     </div>
+    <% if(blogs.length >= 3) { %>
     <div class="row" style="margin-bottom: 1%;">
         <div class="col-12 text-center">
             <h1 class="what">Related Blogs</h1>
         </div>
     </div>
-
+    <% } %>
     <section class="cards-wrapper">
         <% for(var i = 0; i < Math.min(blogs.length,3); ++i) { %>
         <div class="card-grid-space">
@@ -167,7 +172,7 @@
                 <div>
                     <h1><%= blogs[i].title %></h1>
                     <p style="padding-bottom: 10.5em;">
-                        <%= blogs[i].content.substring(0,Math.min(100,blogs[i].content.length)) %> ...</p>
+                        <%= blogs[i].content[0].substring(0,Math.min(100,blogs[i].content[0].length)) %> ...</p>
                     <div class="views">
                         <p><%=blogs[i].views %> Views</p>
                     </div>
