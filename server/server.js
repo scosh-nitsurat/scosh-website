@@ -26,7 +26,8 @@ value.set("Co-Convenor", 2);
 value.set("Technical Head", 3);
 value.set("Graphics Designer", 4);
 value.set("Creative Head", 5);
-value.set("Core Member", 6);
+value.set("Mentor", 6);
+value.set("Core Member", 7);
 
 const db = require("./setup/myurl").mongoURL;
 mongoose
