@@ -82,10 +82,15 @@ app.get("/team/:year", (req, res) => {
         .find()
         .then((teams) => {
             var team = teams.filter((team) => team.year == year);
+            if(team.length == 0) {
+               res.sendStatus(404);
+                return;
+            }
             team[0]["Member"].sort((a, b) => {
                 if (value.get(a.position) > value.get(b.position)) return 1;
                 return -1;
             });
+                
             res.render("teams.ejs", {
                 team: team,
             });
@@ -226,5 +231,10 @@ app.get("/events", (req, res) => {
 app.get("/tryHackMe", (req, res) => {
     res.send("<h1> I Am Inevitable </h1> <h2>Stop scaning the website.</h2>");
 });
+
+app.use(function(req, res){
+    res.sendStatus(404);
+});
+
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Server runnng at port ${port}`));
