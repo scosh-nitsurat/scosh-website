@@ -145,147 +145,163 @@
     </nav>
     <div style="padding-top: 20em; padding-bottom: 17em;">
         <div class="head" style="padding: 3em;">
-            <h1 style="text-align: center; font-family: CeraPro-bold"><%= blog.title %></h1>
-            <h4 style="text-align: center; font-family: CeraPro-regular"> By <%=blog.auther %></h4>
+            <h1 style="text-align: center; font-family: CeraPro-bold">
+                <%= blog.title %>
+            </h1>
+            <h4 style="text-align: center; font-family: CeraPro-regular"> By <%=blog.auther %>
+            </h4>
             <div style="text-align: center; margin-top: 10em;">
-                <% if(blog.image != 'null') %>
-                <img width="65%" src="<%= blog.image %>">
+                <% if(blog.image !='null' ) %>
+                    <img width="65%" src="<%= blog.image %>">
             </div>
         </div>
         <div
             style="margin-left:10%; margin-right:10%; margin-top:7%; margin-bottom: 10%;text-align: left; font-size: 2em;">
-            <% for(var i = 0; i < blog.content.length; ++i) { %>
-            <p style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: white; widht: 100%">
-                <%= blog.content[i] %>
-            </p>
-            <% } %>
+            <% for(var i=0; i < blog.content.length; ++i) { %>
+                <p style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: white; widht: 100%">
+                    <%= blog.content[i] %>
+                </p>
+                <% } %>
         </div>
     </div>
-    <% if(blogs.length >= 3) { %>
-    <div class="row" style="margin-bottom: 1%;">
-        <div class="col-12 text-center">
-            <h1 class="what">Related Blogs</h1>
-        </div>
-    </div>
-    <% } %>
-    <section class="cards-wrapper">
-        <% for(var i = 0; i < Math.min(blogs.length,3); ++i) { %>
-        <div class="card-grid-space">
-            <a class="card" href="<%= blogs[i].id %>" style="--bg-img: url('<%= blogs[i].image %>')">
-                <div>
-                    <h1><%= blogs[i].title %></h1>
-                    <p style="padding-bottom: 10.5em;">
-                        <%= blogs[i].content[0].substring(0,Math.min(100,blogs[i].content[0].length)) %> ...</p>
-                    <div class="views">
-                        <p><%=blogs[i].views %> Views</p>
-                    </div>
-                    <div class="date"><%= blogs[i].date %></div>
-                    <div class="auther">
-                        <p> By <%= blogs[i].auther %> </p>
-                    </div>
-
-                    <div class="tags">
-                        <% for(var j = 0; j < Math.min(3,blogs[i].tags.length); ++j) { %>
-                        <div class="tag"><%= blogs[i].tags[j].tag %></div>
-                        <% } %>
-                    </div>
-                </div>
-            </a>
+    <% if(blogs.length>= 3) { %>
+        <div class="row" style="margin-bottom: 1%;">
+            <div class="col-12 text-center">
+                <h1 class="what">Related Blogs</h1>
+            </div>
         </div>
         <% } %>
-    </section>
-    </div>
-    </div>
+            <section class="cards-wrapper">
+                <% for(var i=0; i < Math.min(blogs.length,3); ++i) { %>
+                    <div class="card-grid-space">
+                        <a class="card" href="<%= blogs[i].id %>" style="--bg-img: url('<%= blogs[i].image %>')">
+                            <div>
+                                <h1>
+                                    <%= blogs[i].title %>
+                                </h1>
+                                <p style="padding-bottom: 10.5em;">
+                                    <%= blogs[i].content[0].substring(0,Math.min(100,blogs[i].content[0].length)) %> ...
+                                </p>
+                                <div class="views">
+                                    <p>
+                                        <%=blogs[i].views %> Views
+                                    </p>
+                                </div>
+                                <div class="date">
+                                    <%= blogs[i].date %>
+                                </div>
+                                <div class="auther">
+                                    <p> By <%= blogs[i].auther %>
+                                    </p>
+                                </div>
 
-
-    <div class="footer-outer">
-        <div class="footer" id="contact">
-
-            <div class="row footer-row footer-info">
-                <div class="col-12" style="color: white;">
-                    <i class="fa fa-map-marker" style="color: #cbd1db; padding-right: 1em"></i><a
-                        href="https://goo.gl/maps/CXxQ8qv8wL958bqu9">Sardar Vallabhbhai National Institute of
-                        Technology</a></div>
-
+                                <div class="tags">
+                                    <% for(var j=0; j < Math.min(3,blogs[i].tags.length); ++j) { %>
+                                        <div class="tag">
+                                            <%= blogs[i].tags[j].tag %>
+                                        </div>
+                                        <% } %>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <% } %>
+            </section>
             </div>
-            <div class="row footer-row justify-content-around footer-social-links">
-                <div class="col-sm-3 col-12">
-                    <a href="https://www.facebook.com/scosh.svnit" target="_blank" style="color: white">Facebook</a>
-                </div>
-
-                <div class="col-sm-3 col-12">
-                    <a href="https://twitter.com/scosh_svnit" target="_blank" style="color: white">Twitter</a>
-                </div>
-
-                <div class="col-sm-3 col-12">
-                    <a href="mailto:svnit.scosh@gmail.com" target="_blank" style="color: white">Gmail</a>
-                </div>
-
-                <div class="col-sm-3 col-12">
-                    <a href="https://www.instagram.com/" target="_blank" style="color: white">Instagram</a>
-                </div>
-            </div>
-            <div class="col-12" style="color: white; font-size: 1.3em; text-align: center;">
-                Copyright © 2020 Scosh NIT Surat
             </div>
 
-        </div>
 
-        <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-        <script>
-            $(".navbar-toggler").click(function () {
-                $(this).toggleClass("btn-top");
-                // $(".navbar-collapse").toggleClass("show");
-                $(".main-nav").toggleClass("white");
-                $(".nav-link").toggleClass("black");
-            });
-            $('.nav-link').click(function () {
-                // $(".navbar-collapse").toggleClass("show");
-                $(".main-nav").toggleClass("white");
-                $(".nav-link").toggleClass("black");
-                $('.navbar-toggler').toggleClass('btn-top');
-            });
-        </script>
-        <script>
+            <div class="footer-outer">
+                <div class="footer" id="contact">
 
-            window.onscroll = function () { scrollFunction(); scrollToTop(); };
+                    <div class="row footer-row footer-info">
+                        <div class="col-12" style="color: white;">
+                            <i class="fa fa-map-marker" style="color: #cbd1db; padding-right: 1em"></i><a
+                                href="https://goo.gl/maps/CXxQ8qv8wL958bqu9">Sardar Vallabhbhai National Institute of
+                                Technology</a>
+                        </div>
 
-            //Get the button:
-            // When the user scrolls down 20px from the top of the document, show the button
+                    </div>
+                    <div class="row footer-row justify-content-around footer-social-links">
+                        <div class="col-sm-3 col-12">
+                            <a href="https://www.facebook.com/scosh.svnit" target="_blank"
+                                style="color: white">Facebook</a>
+                        </div>
 
-            function scrollToTop() {
-                mybutton = document.getElementById("GoToTop");
+                        <div class="col-sm-3 col-12">
+                            <a href="https://twitter.com/scosh_svnit" target="_blank" style="color: white">Twitter</a>
+                        </div>
 
-                if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
-                }
-            }
+                        <div class="col-sm-3 col-12">
+                            <a href="mailto:svnit.scosh@gmail.com" target="_blank" style="color: white">Gmail</a>
+                        </div>
 
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-                document.body.scrollTop = 0; // For Safari
-                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-            }
+                        <div class="col-sm-3 col-12">
+                            <a href="https://www.instagram.com/" target="_blank" style="color: white">Instagram</a>
+                        </div>
+                    </div>
+                    <div class="col-12" style="color: white; font-size: 1.3em; text-align: center;">
+                        Copyright © 2021 Scosh NIT Surat
+                    </div>
+
+                </div>
+
+                <script data-cfasync="false"
+                    src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                <script>
+                    $(".navbar-toggler").click(function () {
+                        $(this).toggleClass("btn-top");
+                        // $(".navbar-collapse").toggleClass("show");
+                        $(".main-nav").toggleClass("white");
+                        $(".nav-link").toggleClass("black");
+                    });
+                    $('.nav-link').click(function () {
+                        // $(".navbar-collapse").toggleClass("show");
+                        $(".main-nav").toggleClass("white");
+                        $(".nav-link").toggleClass("black");
+                        $('.navbar-toggler').toggleClass('btn-top');
+                    });
+                </script>
+                <script>
+
+                    window.onscroll = function () { scrollFunction(); scrollToTop(); };
+
+                    //Get the button:
+                    // When the user scrolls down 20px from the top of the document, show the button
+
+                    function scrollToTop() {
+                        mybutton = document.getElementById("GoToTop");
+
+                        if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                            mybutton.style.display = "block";
+                        } else {
+                            mybutton.style.display = "none";
+                        }
+                    }
+
+                    // When the user clicks on the button, scroll to the top of the document
+                    function topFunction() {
+                        document.body.scrollTop = 0; // For Safari
+                        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                    }
 
 
 
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("mainNav").classList.remove("c25");
-                    document.getElementById("mainNav").style.backgroundColor = "#000000 !important";
-                    document.getElementById("mainNav").classList.add("shadowFix");
-                    document.getElementById("mainNav").classList.add("c23");
+                    function scrollFunction() {
+                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                            document.getElementById("mainNav").classList.remove("c25");
+                            document.getElementById("mainNav").style.backgroundColor = "#000000 !important";
+                            document.getElementById("mainNav").classList.add("shadowFix");
+                            document.getElementById("mainNav").classList.add("c23");
 
-                } else {
-                    document.getElementById("mainNav").classList.add("c25");
-                    document.getElementById("mainNav").classList.remove("shadowFix");
-                    document.getElementById("mainNav").classList.remove("c23");
-                }
-            }
+                        } else {
+                            document.getElementById("mainNav").classList.add("c25");
+                            document.getElementById("mainNav").classList.remove("shadowFix");
+                            document.getElementById("mainNav").classList.remove("c23");
+                        }
+                    }
 
-        </script>
+                </script>
 </body>
 
 </html>

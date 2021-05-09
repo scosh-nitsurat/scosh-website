@@ -312,8 +312,8 @@ body {
         justify-content: center;
     }
     .card-grid-space .num {
-        /margin-left: 0;
-        /text-align: center;
+        margin-left: 0;
+        text-align: center;
     }
 }
 
@@ -360,12 +360,6 @@ a:visited,
 a:active {
     text-decoration: none;
     color: inherit;
-}
-
-@font-face {
-    font-family: "CeraPro";
-    src: url("https://www.hackinthenorth.com/fonts/cera pro sv/Cera\ Pro\ Medium.otf")
-        format("opentype");
 }
 
 .nav-link {

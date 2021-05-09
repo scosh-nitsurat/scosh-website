@@ -51,7 +51,6 @@ app.get("/", (req, res) => {
 //@access PUBLIC
 
 app.get("/blogs", (req, res) => {
-    //loading blogs
     var pageNu = 1;
     if (req.query.page) pageNu = req.query.page;
 
@@ -71,8 +70,8 @@ app.get("/blogs", (req, res) => {
 });
 
 //@type GET
-//@route /teams/
-//@desc route to fetch all the teams data
+//@route /teams/:year
+//@desc route to team details
 //@access PUBLIC
 
 app.get("/team/:year", (req, res) => {
@@ -82,15 +81,15 @@ app.get("/team/:year", (req, res) => {
         .find()
         .then((teams) => {
             var team = teams.filter((team) => team.year == year);
-            if(team.length == 0) {
-               res.sendStatus(404);
+            if (team.length == 0) {
+                res.sendStatus(404);
                 return;
             }
             team[0]["Member"].sort((a, b) => {
                 if (value.get(a.position) > value.get(b.position)) return 1;
                 return -1;
             });
-                
+
             res.render("teams.ejs", {
                 team: team,
             });
@@ -102,7 +101,7 @@ app.get("/team/:year", (req, res) => {
 
 //@type GET
 //@route /blog/
-//@desc reading the blog
+//@desc route to blog reading page
 //@access PUBLIC
 
 app.get("/blog/:id", (req, res) => {
@@ -145,18 +144,9 @@ app.get("/events", (req, res) => {
     res.render("events");
 });
 
-// app.get("/test", (req, res) => {
-//     blogs
-//         .find()
-//         .then((blogCollection) => {
-//             res.render("test.ejs", { blogs: blogCollection });
-//         })
-//         .catch((err) => console.log(err));
-// });
-
 //@type Post
 //@route /SaveTeam/
-//@desc route to Save team Members
+//@desc route to add team Members
 //@access PRIVATE
 
 // app.get("/addblog", (req, res) => {
@@ -186,7 +176,7 @@ app.get("/events", (req, res) => {
 // });
 
 //@type Post
-//@route /SaveTeam/
+//@route /SaveTeam
 //@desc route to Save team Members
 //@access PRIVATE
 
@@ -228,13 +218,11 @@ app.get("/events", (req, res) => {
 //     });
 // });
 
-app.get("/tryHackMe", (req, res) => {
-    res.send("<h1> I Am Inevitable </h1> <h2>Stop scaning the website.</h2>");
+app.use(function (req, res) {
+    res.send(
+        "<h1> Page Not Found </h1> <h2> The Page you are trying to access is either not present or you don't have access. </h2>"
+    );
 });
 
-app.use(function(req, res){
-    res.sendStatus(404);
-});
-
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 7000;
 app.listen(port, () => console.log(`Server runnng at port ${port}`));

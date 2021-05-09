@@ -148,44 +148,54 @@
       <div class="row speaker-row" style="padding-top:4em; padding-bottom: 10em;">
 
         <section class="cards-wrapper">
-          <% for(var i = 9 * (page - 1); i < Math.min(blogs.length,9 * (page)); ++i) { %>
-          <div class="card-grid-space">
-            <a class="card" href="blog/<%= blogs[i].id %>" style="--bg-img: url('<%= blogs[i].image %>');">
-              <div>
-                <h1><%= blogs[i].title %></h1>
-                <p style="padding-bottom: 10.5em;">
-                  <%= blogs[i].content[0].substring(0,Math.min(100,blogs[i].content[0].length)) %> ...</p>
-                <div class="views">
-                  <p><%=blogs[i].views %> Views</p>
+          <% for(var i=9 * (page - 1); i < Math.min(blogs.length,9 * (page)); ++i) { %>
+            <div class="card-grid-space">
+              <a class="card" href="blog/<%= blogs[i].id %>" style="--bg-img: url('<%= blogs[i].image %>');">
+                <div>
+                  <h1>
+                    <%= blogs[i].title %>
+                  </h1>
+                  <p style="padding-bottom: 10.5em;">
+                    <%= blogs[i].content[0].substring(0,Math.min(100,blogs[i].content[0].length)) %> ...
+                  </p>
+                  <div class="views">
+                    <p>
+                      <%=blogs[i].views %> Views
+                    </p>
+                  </div>
+                  <div class="date">
+                    <%= blogs[i].date %>
+                  </div>
+                  <div class="auther">
+                    <p> By <%= blogs[i].auther %>
+                    </p>
+                  </div>
+                  <div class="tags">
+                    <% for(var j=0; j < Math.min(3,blogs[i].tags.length); ++j) { %>
+                      <div class="tag">
+                        <%= blogs[i].tags[j].tag %>
+                      </div>
+                      <% } %>
+                  </div>
                 </div>
-                <div class="date"><%= blogs[i].date %></div>
-                <div class="auther">
-                  <p> By <%= blogs[i].auther %> </p>
-                </div>
-                <div class="tags">
-                  <% for(var j = 0; j < Math.min(3,blogs[i].tags.length); ++j) { %>
-                  <div class="tag"><%= blogs[i].tags[j].tag %></div>
-                  <% } %>
-                </div>
-              </div>
-            </a>
-          </div>
-          <% } %>
+              </a>
+            </div>
+            <% } %>
         </section>
       </div>
     </div>
   </div>
   <nav aria-label="..." style="padding: 2em;">
     <ul class="pagination justify-content-center pagination" style="color:black; padding-bottom: 10em;">
-      <% if(page == 1) { %>
-      <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1" style="background-color: darkgray; color: white;">Previous</a>
-      </li>
+      <% if(page==1) { %>
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" style="background-color: darkgray; color: white;">Previous</a>
+        </li>
 
-      <% } else { %>
-      <li class="page-item" ">
+        <% } else { %>
+          <li class="page-item" ">
         <a class=" page-link" href="/blogs?page=<%= page-1 %>" tabindex="-1"
-        style="background-color: darkgray; color: white;"">
+            style="background-color: darkgray; color: white;"">
         Previous</a>
       </li>
       <% } %>
@@ -193,32 +203,39 @@
       <% for(var i = Math.max(1,page - 2); i < page; ++i) { %>
       <% if(i <= totalPage) { %>
       <li class=" page-item">
-        <a class="page-link" href="/blogs?page=<%= i %>"><%= i%> </a>
-      </li>
-      <% }} %>
+            <a class="page-link" href="/blogs?page=<%= i %>">
+              <%= i%>
+            </a>
+          </li>
+          <% }} %>
 
 
-      <li class="page-item active"><a class="page-link" href="#"><%=page%><span class="sr-only">(current)</span></a>
-      </li>
+            <li class="page-item active"><a class="page-link" href="#">
+                <%=page%><span class="sr-only">(current)</span>
+              </a>
+            </li>
 
-      <% for(var i = 1; i <= Math.min(3, page + i); ++i) { %>
-      <% if(page + i <= totalPage) { %>
-      <li class="page-item">
-        <a class="page-link" href="/blogs?page=<%= page+i %>"><%= page + i%> </a>
-      </li>
-      <% }} %>
+            <% for(var i=1; i <=Math.min(3, page + i); ++i) { %>
+              <% if(page + i <=totalPage) { %>
+                <li class="page-item">
+                  <a class="page-link" href="/blogs?page=<%= page+i %>">
+                    <%= page + i%>
+                  </a>
+                </li>
+                <% }} %>
 
-      <% if(page == totalPage) { %>
-      <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1" style="background-color: darkgray; color: white;">Next</a>
-      </li>
+                  <% if(page==totalPage) { %>
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1"
+                        style="background-color: darkgray; color: white;">Next</a>
+                    </li>
 
-      <% } else { %>
-      <li class="page-item">
-        <a class="page-link" href="/blogs?page=<%= page+1 %>" tabindex="-1"
-          style="background-color: darkgray; color: white;">Next</a>
-      </li>
-      <% } %>
+                    <% } else { %>
+                      <li class="page-item">
+                        <a class="page-link" href="/blogs?page=<%= page+1 %>" tabindex="-1"
+                          style="background-color: darkgray; color: white;">Next</a>
+                      </li>
+                      <% } %>
 
 
     </ul>
@@ -229,7 +246,8 @@
       <div class="row footer-row footer-info">
         <div class="col-12" style="color: white;">
           <i class="fa fa-map-marker" style="color: #cbd1db; padding-right: 1em"></i><a
-            href="https://goo.gl/maps/CXxQ8qv8wL958bqu9">Sardar Vallabhbhai National Institute of Technology</a></div>
+            href="https://goo.gl/maps/CXxQ8qv8wL958bqu9">Sardar Vallabhbhai National Institute of Technology</a>
+        </div>
 
       </div>
       <div class="row footer-row justify-content-around footer-social-links">
@@ -250,7 +268,7 @@
         </div>
       </div>
       <div class="col-12" style="color: white; font-size: 1.3em; text-align: center;">
-        Copyright © 2020 Scosh NIT Surat
+        Copyright © 2021 Scosh NIT Surat
       </div>
 
     </div>

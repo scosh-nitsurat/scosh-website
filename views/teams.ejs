@@ -172,41 +172,45 @@
     <div class="team" id="team" style="padding-top: 20em; padding-bottom: 17em;">
         <div class="container">
             <div class="row" style="align-content: center;">
-                <% for(var i = 0; i < team[0]["Member"].length; ++i) { %>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="our-team">
-                        <div class="picture">
-                            <img class="img-fluid" src="<%=team[0]['Member'][i].image%>"
-                                style="width: 650px; height: 200px;">
+                <% for(var i=0; i < team[0]["Member"].length; ++i) { %>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="our-team">
+                            <div class="picture">
+                                <img class="img-fluid" src="<%=team[0]['Member'][i].image%>"
+                                    style="width: 650px; height: 200px;">
+                            </div>
+                            <div class="team-content">
+                                <h3 class="name">
+                                    <%= team[0]['Member'][i].name %>
+                                </h3>
+                                <h4 class="title">
+                                    <%= team[0]['Member'][i].position %>
+                                </h4>
+                            </div>
+                            <ul class="social">
+                                <% if(team[0]["Member"][i].facebook !="" ) { %>
+                                    <li><a href="<%= team[0]['Member'][i].facebook %>" class="	fa fa-facebook-f"
+                                            aria-hidden="true"></a></li>
+                                    <% } %>
+                                        <% if(team[0]["Member"][i].instagram !="" ) { %>
+                                            <li><a href="<%= team[0]['Member'][i].instagram %>" class="fa fa-instagram"
+                                                    aria-hidden="true"></a></li>
+                                            <% } %>
+
+                                                <% if(team[0]["Member"][i].gmail !="" ) { %>
+                                                    <li><a href="mailto:<%= team[0]['Member'][i].gmail%>"
+                                                            class="fa fa-google-plus" aria-hidden="true"></a></li>
+                                                    <% } %>
+
+                                                        <% if(team[0]["Member"][i].linkedin !="" ) { %>
+                                                            <li><a href="<%= team[0]['Member'][i].linkedin %>"
+                                                                    class="fa fa-linkedin" aria-hidden="true"></a></li>
+                                                            <% } %>
+
+                            </ul>
                         </div>
-                        <div class="team-content">
-                            <h3 class="name"><%= team[0]['Member'][i].name %></h3>
-                            <h4 class="title"><%= team[0]['Member'][i].position %></h4>
-                        </div>
-                        <ul class="social">
-                            <% if(team[0]["Member"][i].facebook != "") { %>
-                            <li><a href="<%= team[0]['Member'][i].facebook %>" class="	fa fa-facebook-f"
-                                    aria-hidden="true"></a></li>
-                            <% } %>
-                            <% if(team[0]["Member"][i].instagram != "") { %>
-                            <li><a href="<%= team[0]['Member'][i].instagram %>" class="fa fa-instagram"
-                                    aria-hidden="true"></a></li>
-                            <% } %>
-
-                            <% if(team[0]["Member"][i].gmail != "") { %>
-                            <li><a href="mailto:<%= team[0]['Member'][i].gmail%>" class="fa fa-google-plus"
-                                    aria-hidden="true"></a></li>
-                            <% } %>
-
-                            <% if(team[0]["Member"][i].linkedin != "") { %>
-                            <li><a href="<%= team[0]['Member'][i].linkedin %>" class="fa fa-linkedin"
-                                    aria-hidden="true"></a></li>
-                            <% } %>
-
-                        </ul>
                     </div>
-                </div>
-                <% } %>
+                    <% } %>
             </div>
         </div>
 
@@ -220,7 +224,8 @@
                 <div class="col-12" style="color: white;">
                     <a class="fa fa-map-marker" style="color: #cbd1db; padding-right: 1em"></a><a
                         href="https://goo.gl/maps/CXxQ8qv8wL958bqu9">Sardar Vallabhbhai National Institute of
-                        Technology</a></div>
+                        Technology</a>
+                </div>
 
             </div>
             <div class="row footer-row justify-content-around footer-social-links">
@@ -241,7 +246,7 @@
                 </div>
             </div>
             <div class="col-12" style="color: white; font-size: 1.3em; text-align: center;">
-                Copyright © 2020 Scosh NIT Surat
+                Copyright © 2021 Scosh NIT Surat
             </div>
 
         </div>

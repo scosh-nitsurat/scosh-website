@@ -148,9 +148,9 @@
     <div class="heading">
       <div class="container">
         <div class="stars" style="z-index: 0;">
-          <% for(var i = 0; i <= 100; ++i) { %>
-          <div class="star"></div>
-          <% } %>
+          <% for(var i=0; i <=100; ++i) { %>
+            <div class="star"></div>
+            <% } %>
         </div>
       </div>
 
@@ -217,8 +217,8 @@
     <img src="https://cdn.glitch.com/d93ac0f2-6959-4ef7-bff9-50e9478c9a16%2Fsun.webp?v=1605457677249" alt="" id="mid"
       style="padding-top: 0%;max-width:32%; max-height:35%">
 
-    <img src="https://cdn.glitch.com/d93ac0f2-6959-4ef7-bff9-50e9478c9a16%2Flogo.webp?v=1605457672612" alt="" style="padding-top: 6em;"
-      class="main-landing-text" id="mid">
+    <img src="https://cdn.glitch.com/d93ac0f2-6959-4ef7-bff9-50e9478c9a16%2Flogo.webp?v=1605457672612" alt=""
+      style="padding-top: 6em;" class="main-landing-text" id="mid">
 
     <img src="https://cdn.glitch.com/d93ac0f2-6959-4ef7-bff9-50e9478c9a16%2Fearth.webp?v=1605457660411" alt=""
       id="front" style="z-index:10; position: absolute;
@@ -282,30 +282,40 @@
     </div>
 
     <section class="cards-wrapper">
-      <% for(var i = 0; i < Math.min(blogs.length,6); ++i) { %>
-      <div class="card-grid-space">
-        <a class="card" href="blog/<%= blogs[i].id %>" style="--bg-img: url('<%= blogs[i].image %>')">
-          <div>
-            <h1><%= blogs[i].title %></h1>
-            <p style="padding-bottom: 10.5em;">
-              <%= blogs[i].content[0].substring(0,Math.min(100,blogs[i].content[0].length)) %> ...</p>
-            <div class="views">
-              <p><%=blogs[i].views %> Views</p>
-            </div>
-            <div class="date"><%= blogs[i].date %></div>
-            <div class="auther">
-              <p> By <%= blogs[i].auther %> </p>
-            </div>
+      <% for(var i=0; i < Math.min(blogs.length,6); ++i) { %>
+        <div class="card-grid-space">
+          <a class="card" href="blog/<%= blogs[i].id %>" style="--bg-img: url('<%= blogs[i].image %>')">
+            <div>
+              <h1>
+                <%= blogs[i].title %>
+              </h1>
+              <p style="padding-bottom: 10.5em;">
+                <%= blogs[i].content[0].substring(0,Math.min(100,blogs[i].content[0].length)) %> ...
+              </p>
+              <div class="views">
+                <p>
+                  <%=blogs[i].views %> Views
+                </p>
+              </div>
+              <div class="date">
+                <%= blogs[i].date %>
+              </div>
+              <div class="auther">
+                <p> By <%= blogs[i].auther %>
+                </p>
+              </div>
 
-            <div class="tags">
-              <% for(var j = 0; j < Math.min(3,blogs[i].tags.length); ++j) { %>
-              <div class="tag"><%= blogs[i].tags[j].tag %></div>
-              <% } %>
+              <div class="tags">
+                <% for(var j=0; j < Math.min(3,blogs[i].tags.length); ++j) { %>
+                  <div class="tag">
+                    <%= blogs[i].tags[j].tag %>
+                  </div>
+                  <% } %>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      <% } %>
+          </a>
+        </div>
+        <% } %>
     </section>
   </div>
   </div>
@@ -337,7 +347,8 @@
         <div class="col-12" style="color: white;">
           <i class="fa fa-map-marker" style="color: #cbd1db; padding-right: 1em"></i><a
             href="https://goo.gl/maps/CXxQ8qv8wL958bqu9">Sardar Vallabhbhai National Institute of
-            Technology</a></div>
+            Technology</a>
+        </div>
 
       </div>
 
@@ -359,7 +370,7 @@
         </div>
       </div>
       <div class="col-12" style="color: white; font-size: 1.3em; text-align: center;">
-        Copyright © 2020 Scosh NIT Surat
+        Copyright © 2021 Scosh NIT Surat
       </div>
 
     </div>
